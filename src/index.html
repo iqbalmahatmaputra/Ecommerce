@@ -1,67 +1,136 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
-<body>
-<header class="bg-red-600 ">
-    <div class="container">
-<nav class="flex justify-around items-center">
-    <ol class="flex space-x-4 text-slate-200 font-thin items-center">
-        <li>Seller</li>
-        <li>Mulai Berjualan</li>
-        <li>Download</li>
-        <li>Ikuti Kami di</li>
-        <li class="flex items-center justify-start">
-            <a href="http://instagram.com/LearningX" target="_blank" rel="noopener noreferrer" class="flex items-center h-9 w-9 ">
-                <i class="fa-brands fa-instagram border-slate-300 text-slate-300 hover:border-red-600 hover:bg-red-600 hover:text-white" ></i>
-            </a>
-            <a href="http://instagram.com/LearningX" target="_blank" rel="noopener noreferrer" class="flex items-center h-9 w-9 -ml-2">
-                <i class="fa-brands fa-youtube border-slate-300 text-slate-300 hover:border-red-600 hover:bg-red-600 hover:text-white"></i>
-            </a>
-        </li>
-    </ol>
-    <ol class="hidden lg:flex space-x-4 text-slate-200 font-thin items-center">
-        <li class="flex items-center">
-            <i class="fa-regular fa-bell"></i>
-            <span class="ml-1">Notifikasi</span></li>
-        <li class="flex items-center"><i class="fa-regular fa-circle-question"></i><span class="ml-1">Bantuan</span></li>
-        <li class="flex items-center"><i class="fa-solid fa-globe"></i><span class="ml-1">Bahasa Indonesia</span></li>
-        <li class="flex items-center"><i class="fa-regular fa-user"></i><span class="ml-1">Akun</span></li>
- 
-    </ol>
-</nav>
-    </div>
-    <!-- Search Bar Start -->
-    <div class="search-bar">
-        <div class="container">
-            <div class="flex justify-center">
-                <div class="flex flex-row space-x-2">
-                    <div class="w-1/4">
-                        <div class="rounded">
-                            <img src="../dist/img/logoShopeeLearnX.png" alt="" srcset="">
+
+<body class="">
+    <header class="bg-red-600 ">
+        <div class="container max-w-7xl">
+            <nav class="flex justify-around items-center ">
+                <ol class="flex space-x-4 text-slate-200 font-thin items-center">
+                    <li>Seller</li>
+                    <li>Mulai Berjualan</li>
+                    <li>Download</li>
+                    <li>Ikuti Kami di</li>
+                    <li class="flex items-center justify-start">
+                        <a href="http://instagram.com/LearningX" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center h-9 w-9 ">
+                            <i
+                                class="fa-brands fa-instagram border-slate-300 text-slate-300 hover:border-red-600 hover:bg-red-600 hover:text-white"></i>
+                        </a>
+                        <a href="http://instagram.com/LearningX" target="_blank" rel="noopener noreferrer"
+                            class="flex items-center h-9 w-9 -ml-2">
+                            <i
+                                class="fa-brands fa-youtube border-slate-300 text-slate-300 hover:border-red-600 hover:bg-red-600 hover:text-white"></i>
+                        </a>
+                    </li>
+                </ol>
+                <ol class="hidden lg:flex space-x-4 text-slate-200 font-thin items-center">
+                    <li class="flex items-center">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="ml-1">Notifikasi</span></li>
+                    <li class="flex items-center"><i class="fa-regular fa-circle-question"></i><span
+                            class="ml-1">Bantuan</span></li>
+                    <li class="flex items-center"><i class="fa-solid fa-globe"></i><span class="ml-1">Bahasa
+                            Indonesia</span></li>
+                    <li class="flex items-center"><i class="fa-regular fa-user"></i><span class="ml-1">Akun</span></li>
+
+                </ol>
+            </nav>
+        </div>
+        <!-- Search Bar Start -->
+        <div class="search-bar">
+            <div class="container">
+                <div class="flex justify-center">
+                    <div class="flex flex-row space-x-2">
+                        <div class="w-1/4 md:w-[150px]">
+                            <div class="rounded h-full items-center  p-2">
+                                <img src="../dist/img/logo_shopee.png" class="w-52" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="w-2/4 md:w-[850px]">
+                            <div class="flex relative mb-2">
+                                <input type="text"
+                                    class="rounded-l-lg flex-1 appearance-none  w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent md:h-9 "
+                                    placeholder="Daftar & Dapat Voucher Gratis" />
+                                <span
+                                    class="rounded-r-md inline-flex  items-center px-3  bg-white  text-gray-500 shadow-sm text-sm">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                            </div>
+                            <ol class="hidden mb-2 md:flex space-x-2 text-xs text-slate-200 font-thin items-center">
+                                <li>Switer Murah10K</li>
+                                <li>Rp 1 Rupiah Sepatu </li>
+                                <li>Serba 1 Rupiah HP</li>
+                                <li>Hoodie Murah 10K </li>
+                                <li>Sendal Serba 5K</li>
+                                <li>Iphone Gratis </li>
+                            </ol>
+                        </div>
+                        <div class="w-1/4 md:w-[150px]">
+                            <div class="flex h-full items-center justify-center p-2 ">
+                                <i class="fa-solid fa-cart-shopping fa-lg md:fa-2xl" style="color: #ffffff;"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="w-2/4">
-                        <div class="search-box">
-                            <input type="text" class="enabled:hover:border-gray-400 disabled:opacity-75 w-full" name="" id="">
-                        </div>
-                    </div>
-                    <div class="w-1/4">
-                        <div class="flex items-center justify-center">
-                            <i class="fa-solid fa-2x cart-shopping"></i>
-                        </div>
-                    </div>
-                  </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Search Bar End -->
-</header>
+        <!-- Search Bar End -->
+    </header>
+    <section id="banner">
+        <div class="md:container w-full md:max-w-7xl">
+            <div class="flex flex-row justify-center">
+                <div class="left-banner md:mt-6 swiper md:w-[875px] md:h-[270px]">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img class="rolling-banner bg-cover md:h-[270px]" src="../dist/img/banners/banner_1.png"></div>
+                        <div class="swiper-slide"><img class="rolling-banner bg-cover md:h-[270px]" src="../dist/img/banners/banner_2.png"></div>
+                        <div class="swiper-slide"><img class="rolling-banner bg-cover md:h-[270px]" src="../dist/img/banners/banner_3.png"></div>
+                        <div class="swiper-slide"><img class="rolling-banner bg-cover md:h-[270px]" src="../dist/img/banners/banner_4.png"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="right-banner flex flex-col md:mt-6 md:h-[270px]">
+                    <img src="../dist/img/banners/banner_right_top.png" class="h-1/2 pl-2 pb-2" alt="" srcset="">
+                    <img src="../dist/img/banners/banner_right_bottom.png" class="h-1/2 pl-2" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            //moving
+            autoplay:{
+                delay:2000,
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
+
 </html>
